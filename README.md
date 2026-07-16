@@ -13,7 +13,7 @@ Cálculo de Probabilidad: Estimación basada en métricas frente a la probabilid
 Edge & Valor: Determinación de si una apuesta tiene valor esperado positivo (EV+) o si es una trampa de mercado.
 
 🚀 Cómo usarlo
-API Key: Necesitas una clave de API de Google Gemini. Puedes obtenerla gratis en Google AI Studio.
+API Key: Necesitas una clave de API de OpenRouter. Puedes obtenerla gratis en https://openrouter.ai/.
 
 Configuración: Al abrir la herramienta, pega tu clave en el campo correspondiente y haz clic en "Guardar".
 
@@ -24,7 +24,12 @@ Frontend: HTML5, CSS3 (diseño responsivo con Syne y DM Mono).
 
 Lógica: JavaScript nativo para la gestión de estado y cálculos matemáticos.
 
-Inteligencia Artificial: Integración directa con la API de Google Gemini 2.0 Flash para el procesamiento de lenguaje natural y búsqueda de datos en tiempo real (Google Search).
+Inteligencia Artificial: Integración directa con la API de OpenROUTER para el procesamiento de lenguaje natural y búsqueda de datos en tiempo real (Google Search).
 
-⚠️ Aviso de responsabilidad
+⚠️ Aviso de responsabilidaD : Gestión responsable: Este análisis es informativo, no es consejo financiero ni de apuestas. Hay variables impredecibles: ⚠
+Definición por penales si hay empate (sin prórroga)[2]
+⚠
+Lesiones de última hora en el ataque de España (Yamal o Soler)
+⚠
+Factor psicológico en final de Copa del Mundo 2026 .
 SportEdge es una herramienta informativa. El análisis deportivo es un modelo estocástico; la incertidumbre es inherente al deporte. Nunca utilices capital destinado a necesidades básicas para realizar apuestas. La herramienta está diseñada para fomentar la disciplina financiera y el pensamiento crítico, no como una fuente de ingresos.
