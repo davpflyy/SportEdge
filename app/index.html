@@ -473,7 +473,11 @@ async function runAnalysis(){
   document.getElementById('results').innerHTML='<div class="loading-state"><div class="spinner"></div><p>Analizando...</p><small>Procesando datos del partido...</small></div>';
   const prompt='Eres un analista deportivo de élite. CRÍTICO: Responde TODO en español latino, sin excepción. Todos los textos del JSON deben estar en español. Analiza: "'+query+'", deporte: '+currentSport+'. Contexto: '+sportCtx[currentSport]+'. Devuelve SOLO JSON sin markdown: {"playerA":"","playerB":"","event":"","surface":"","date":"","svpA":0,"svpB":0,"rvpA":0,"rvpB":0,"probA":0,"probB":0,"fatigueA":0,"fatigueB":0,"recentFormA":"","recentFormB":"","h2hRecord":"","h2hContext":"","marketOdds":"","impliedProbA":0,"edgeA":0,"edgeVerdict":"VALOR POSITIVO","keyFactors":["","",""],"unpredictableRisks":["",""],"recommendation":"","dataQuality":"HIGH","sport":"'+currentSport+'"}'
   try{
-    const resp=await fetch('https://openrouter.ai/api/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey,'HTTP-Referer':'https://davpflyy.github.io/SportEdge/','X-Title':'SportEdge'},body:JSON.stringify({model:'openrouter/auto',messages:[{role:'user',content:prompt}],max_tokens:1000,temperature:0.3})});
+   const resp=await fetch('https://sport-edge-eight.vercel.app/api/analyze',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({prompt: prompt})
+});
     console.log('Status:',resp.status);
     if(resp.status===429){btn.disabled=false;btn.textContent='Analizar →';startCountdown(90);return;}
     if(resp.status===402){btn.disabled=false;btn.textContent='Analizar →';document.getElementById('results').innerHTML='<div class="error-card">⚠ Sin créditos (402) — Recarga en <a href="https://openrouter.ai/credits" target="_blank" style="color:#4285f4">openrouter.ai/credits</a></div>';return;}
