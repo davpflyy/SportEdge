@@ -322,38 +322,11 @@ function renderPlanGate(){
   const count=getTodayCount(), remaining=pd.dailyLimit-count;
   const gate=document.getElementById('planGateContent');
   if(plan==='free'){
-    gate.innerHTML=`
-      <div style="display:flex;gap:6px;margin-bottom:10px">
-        <button class="plan-tab-btn active" id="tabFreeBtn" onclick="showGateTab('free',this)">Mi plan</button>
-        <button class="plan-tab-btn" id="tabActBtn" onclick="showGateTab('activate',this)">Tengo un código</button>
-      </div>
-      <div id="gateTabFree">
-        <div class="plan-display">
-          <div>
-            <span class="plan-badge plan-free">🔓 Plan Gratuito</span>
-            <div class="plan-limit" style="margin-top:6px">${remaining} de ${pd.dailyLimit} análisis hoy</div>
-            <div class="counter-bar" style="width:200px"><div class="counter-fill" style="width:${Math.max(0,(remaining/pd.dailyLimit)*100)}%"></div></div>
-          </div>
-          <a href="https://davpflyy.github.io/SportEdge/#pricing" target="_blank" class="btn-upgrade">⚡ Upgrade a Pro</a>
-        </div>
-      </div>
-      <div id="gateTabActivate" style="display:none">
-        <div class="access-form">
-          <input type="text" id="codeInput" placeholder="SPORTEDGE-PRO-XXXXXXXX" style="text-transform:uppercase"/>
-          <button class="btn-access" onclick="submitCode()">Activar →</button>
-        </div>
-        <div id="codeStatus" style="font-size:12px;font-family:var(--fm);margin-top:6px"></div>
-      </div>
-      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border)">
-        <div style="font-size:10px;font-family:var(--fm);color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">🔑 OpenRouter API Key</div>
-        <div style="display:flex;gap:8px">
-          <input type="password" id="apiKeyMini" placeholder="sk-or-v1-..." style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:8px 12px;color:var(--text1);font-family:var(--fm);font-size:12px;outline:none"/>
-          <button onclick="saveKeyMini()" style="background:#4285f4;border:none;border-radius:var(--r);padding:8px 14px;color:#fff;font-family:var(--fh);font-size:12px;font-weight:600;cursor:pointer">Guardar</button>
-        </div>
-        <div style="font-size:10px;color:var(--text3);font-family:var(--fm);margin-top:4px">Gratis en <a href="https://openrouter.ai/keys" target="_blank" style="color:#4285f4">openrouter.ai/keys</a></div>
-        <div id="apiKeyMiniStatus" style="font-size:11px;font-family:var(--fm);margin-top:4px"></div>
+    gate.innerHTML = `
+      <div style="font-size: 13px; font-family: var(--fm); color: var(--text2);">
+        Bienvenido a SportEdge.
       </div>`;
-  } else {
+  } else { 
     const badgeClass=plan==='elite'?'plan-elite':'plan-pro';
     const icon=plan==='elite'?'👑':'⚡';
     gate.innerHTML=`
